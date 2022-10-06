@@ -1,0 +1,25 @@
+#include <stdio.h>
+double c(double m, double n)//функиця для нахождения значения С
+{
+double c = 1/m;
+for (; 0 < n; n--)
+{
+c += 1 / (m + n);
+}
+return c;
+}
+int main()
+{
+int m, n;
+printf("Enter m and n: ");
+scanf("%d%d", &m, &n);
+if ( m < n && m>0 && n>0)//проверка условия
+{
+printf("Meaning c = %f", c(m, n));
+}
+else
+{
+printf("Invalid variable value");
+}
+return 0;
+}
